@@ -41,6 +41,18 @@ services:
       - elk
     depends_on:
       - elasticsearch
+  
+  nginx:
+    build:
+      context: nginx/
+    volumes:
+      - ./nginx/config:/etc/nginx:ro
+    ports:
+      - "80:80"
+    networks:
+      - elk
+    depends_on:
+      - kibana
 
 networks:
 
