@@ -1,0 +1,9 @@
+Docker  logging
+
+https://logz.io/blog/docker-logging/
+https://logz.io/blog/docker-stats-monitoring-dockbeat/
+
+//official metrics beat for Mongo, Docker, Golang apps
+https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-reference-yml.html
+https://www.elastic.co/blog/monitor-and-optimize-golang-application-by-using-elastic-stack
+https://www.elastic.co/products/beats/metricbeat
