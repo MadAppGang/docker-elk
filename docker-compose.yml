@@ -35,8 +35,8 @@ services:
       context: kibana/
     volumes:
       - ./kibana/config/:/usr/share/kibana/config:ro
-    ports:
-      - "5601:5601"
+    # ports:
+    #   - "5601:5601"
     networks:
       - elk
     depends_on:
@@ -45,10 +45,13 @@ services:
   nginx:
     build:
       context: nginx/
+    container_name: nginx
     volumes:
       - ./nginx/config:/etc/nginx:ro
+      - ./nginx/htpasswd:/etc/htpasswd:ro
     ports:
       - "80:80"
+      - "443:443"
     networks:
       - elk
     depends_on:
